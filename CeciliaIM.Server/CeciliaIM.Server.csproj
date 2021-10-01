@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="NetCoreServer" Version="5.1.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
     <PackageReference Include="SunnyUI" Version="3.0.7" />
   </ItemGroup>
 

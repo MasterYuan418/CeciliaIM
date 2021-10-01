@@ -11,6 +11,7 @@ namespace CeciliaIM.Server.Backend.Utils
 {
     class ChatSession : SslSession
     {
+        public string HelloMessage { private get; set; }
         public ChatSession(SslServer server) : base(server) { }
 
         protected override void OnConnected()
@@ -23,7 +24,8 @@ namespace CeciliaIM.Server.Backend.Utils
             Console.WriteLine($"Chat SSL session with Id {Id} handshaked!");
 
             // Send invite message
-            string message = "Hello from SSL chat! Please send a message or '!' to disconnect the client!";
+            // string message = "Hello from SSL chat! Please send a message or '!' to disconnect the client!";
+            string message = HelloMessage;
             Send(message);
         }
 
